@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	<title>Design Responsivo - Técnicas e Frameworks</title>
+	</head>
+	<body>
+		<style type="text/css">
+			body{
+				background-color:#17202A;
+				padding: 80px 20% 200px 20%;
+			}
+			header{
+				font-family:Helvetica;
+				color:#ADD8E6;
+				font-size:40px;
+			}
+			h1{
+				font-family:Helvetica;
+				color:#ADD8E6;
+				font-size:30px;
+			}
+			p{
+				font-family:Arial;
+				color:white;
+				font-size:18px;
+			}
+			table{
+				font-family:Arial;
+				background-color:white;
+				color:black;
+				font-size:18px;
+			}
+			ul{
+				font-family:Arial;
+				color:white;
+				font-size:18px;
+			}
+			a{
+				font-family:Arial;
+				color:#ADD8E6;
+				font-size:20px;
+			}
+		</style>
+
+		<header>Design Responsivo</header>
+
+		<h1>O que é design responsivo?</h1>
+		<p>Design Responsivo é uma técnica de estruturação HTML e CSS, que consiste em adaptar o site ao browser do usuário sem que seja necessário definir várias folhas de estilos especíificas para cada resolução, ou seja, é um tipo de design onde o layout fica fluído e variante de acordo com a resolução do usuário.</p>
+		<p>Esse tipo de design responsivo teve origem em 2010 com o objetivo de melhorar a experiência de navegação dos usuários de páginas web.</p>
+
+		<h1>Por que é importante usar Design Responsivo?</h1>
+		<p>Pensando na quantidade de dispositivos novos com acesso à internet que surgiram, os desenvolvedores precisam ter uma preocupação muito maior de tornar seus websites disponíveis para esse público, surgindo então a importância de um website ser bem visto em qualquer dispositivo, independente da sua resolução de tela.</p>
+		<p>Mais do que uma simples tendência de design, o design responsivo é um conjunto de ferramentas e técnicas modernas que definem como o conteúdo será exibido ao usuário.</p>
+
+		<h1>Como manter um layout limpo</h1>
+		<p>Muitos desenvolvedores criam seus websites com códigos sujos, muitas vezes gerados automaticamente por softwares.</p>
+		<p>É extremamente importante que nessa nova fase de sites responsivos, que os desenvolvedores façam seus códigos limpos e que escrevam apenas códigos que serão usados de fato. Faça códigos o mais simples possível, evitando exageros desnecessários.</p>
+		<p>Evite:</p>
+		<ul>
+			<li>Divs desnecessárias;</li>
+			<li>Estilos CSS inlines (use sempre arquivos externos);</li>
+			<li>JS ou arquivos Flash sem fallback;</li>
+			<li>position absolute ou posicionamentos float desnecessários;</li>
+			<li>Evite códigos redundantes ou códigos que não são 100% úteis.</li>
+		</ul>
+		<p>Procure usar:</p>
+		<ul>
+			<li>Doctype html5;</li>
+			<li>Use um Reset CSS;</li>
+			<li>Código simples e semântico;</li>
+			<li>Técnicas simples para elementos como barras de navegação, menus, etc.</li>
+			<li>Frameworks.</li>
+		</ul>
+
+
+		<h1>Media Queries</h1>
+		<p>Para designs responsivos é necessário ter foco nas condições de width, onde dependendo da largura do conteúdo, ou seja, dependendo da resolução do dispositivo, irá ser carregada uma folha de estilos diferente ou uma folha de estilo específica.</p>
+		<p><img src="Media-Queries.jpg" width='50%'/></p>
+		<h1>Resoluções mais frequentes</h1>
+		<p>Uma dúvida muito comum é de saber como definir qual tamanho de resolução você deve buscar. Na figura abaixo é possível ver as resoluções mais frequentemente utilizadas.</p>
+
+		<h1>Breakpoints</h1>
+		<p>Resoluções comuns podem ser classificadas em seis grandes breakpoints, você pode trabalhar com elas da seguinte maneira:</p>
+		<table border="1px">
+			<tr>
+				<th><480</th>
+				<td>Direcione a primeira geração de smartphones em modo retrato com <480px.</td>
+			</tr>
+			<tr>
+				<th><768</th>
+				<td>Use a condição <768px para a maioria dos tablets e smartphones de segunda geração.</td>
+			</tr>
+			<tr>
+				<th>>768</th>
+				<td>Notebooks, desktops e televisores usarão a regra >768px.</td>
+			</tr>
+			<tr>
+				<th><320</th>
+				<td>Utilize essa largura para baixas resoluções.</td>
+			</tr>
+			<tr>
+				<th>768-1024</th>
+				<td>Tablets em modo paisagem deverão usar a regra >768px E <1024px.</td>
+			</tr>
+			<tr>
+				<th>>1024</th>
+				<td>Utilize o layout em tela cheia widescreen para desktops, notebooks e dispositivos de altas resoluções >1024px.</td>
+			</tr>
+		</table>
+		
+		<h1>Layout flexível</h1>
+		<p>Grids flexíveis usam colunas para organizar o conteúdo. Usam larguras relativas ao invés das fixas para se adaptarem a largura da tela do usuário.</p>
+		<p><img src="Grid-Flexivel.gif" width='50%'/></p>
+		<p>Layout fluido é sempre a melhor maneira de estar pronto para qualquer tipo de tamanho de tela e/ou orientação. Dessa forma pouco vai importar se o usuário está acessando o site por um smartphone ou por uma televisão, o layout irá se adaptar à resolução do usuário.</p>
+
+		<h1>Max e Min width</h1>
+		<p>Você pode usar <code>max</code> e <code>min</code> como limites aplicados a seus tamanhos relativos.</p>
+		<p>Sua principal função de se usar é para impedir que o layout aumente ou diminua de uma forma errada quando exibido em um dispositivo realmente grande ou pequeno.</p>
+
+		<h1>Frameworks</h1>
+		<p>Todo os frameworks têm suas regras de desenvolvimento e cada um deles disponibiliza seu manual de uso.</p>
+		<p>Dentre os Frameworks que podemos utilizar para a ocasião, temos:</p>
+		<ul>
+			<li><a href="https://getbootstrap.com/" style="font-weight:bold;">Bootstrap</a>: é o framework mais popular para desenvolvimento responsivo. Ele foi criado pela equipe do Twitter e atualmente é utilizado por uma quantidade imensa de sites, e-commerce e sistemas.</li>
+			<img src="Bootstrap.jpg"/>
+			<p/>
+			<li><a href="http://getskeleton.com/"  style="font-weight:bold;">Skeleton</a>: ele é limpo, contém somente o que é básico e necessário: formulários, botões, tipografia e grid. Sua curva de aprendizado é baixíssima. Ideal para quem quer desenvolver funcionalidades/aplicações.</li>
+			<img src="Skeleton.jpg"/>
+			<p/>
+			<li><a href="https://get.foundation"  style="font-weight:bold;">Foundation</a>: Com ele, você consegue desenvolver mobile first e ir passando para telas maiores ou vice-versa, além de conseguir trabalhar com a prototipagem do site de forma rápida.</li>
+			<img src="Foundation.jpg"/>
+			<p/>
+		</ul>
+		
+		<h1>Conclusão</h1>
+		<p>A partir das dicas passadas, é possível tornar um site muito mais responsivo e acessível ao público geral, com uma melhor organização do código e a utilização de ferramentas como frameworks.</p>
+		
+		<h1>Referências</h1>
+		<ul>
+			<li><a href="https://www.devmedia.com.br/responsive-design-dicas-para-tornar-seu-site-acessivel-em-qualquer-resolucao/28316">DevMedia. Responsive Design: dicas para tornar seu site acessível em qualquer resolução. Disponível em: https://www.devmedia.com.br/responsive-design-dicas-para-tornar-seu-site-acessivel-em-qualquer-resolucao/28316. Acesso em: 18/08/2023.</a></li>
+			<p/>
+			<li><a href="https://www.linkedin.com/pulse/design-responsivo-5-frameworks-que-facilitarão-sua-vida-gustavo-braga">LinkedIn. Design responsivo: 5 frameworks que facilitarão sua vida. Disponível em: https://www.linkedin.com/pulse/design-responsivo-5-frameworks-que-facilitarão-sua-vida-gustavo-braga. Acesso em: 18/08/2023.</a></li>
+			<p/>
+		</ul>
+	</body>
+</html>
