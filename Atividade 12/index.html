@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atividade 12</title>
+</head>
+<body>
+    <script>
+        var aluno1 = new Object();
+        aluno1.ra = "019";
+        aluno1.nome = "VINÍCIUS1";
+        alert("ra = " + aluno1.ra + "\nnome = " + aluno1.nome);
+
+        var aluno2 = {};
+        aluno2.ra = "020";
+        aluno2.nome = "VINÍCIUS2";
+        alert("ra = " + aluno2.ra + "\nnome = " + aluno2.nome);
+
+        var aluno3 = {ra: "021", nome: "VINÍCIUS3"};
+        alert("ra = " + Aluno3.ra + "\nnome = " + Aluno3.nome); 
+
+        function Aluno(ra, nome) {
+            this.ra = ra;
+            this.nome = nome;
+            this.MostraDados = function() {
+                return "ra = " + this.ra + "\nnome = " + this.nome;
+            }
+        }
+        var aluno4 = new Aluno("022", "VINÍCIUS4");
+        alert("ra = " + aluno4.ra + "\nnome = " + aluno4.nome);
+
+        function Aluno2() {
+            var ra;
+            var nome;
+            this.setRa = function(value) {
+                this.ra = value;
+            }
+            this.getRa = function() {
+                return this.ra;
+            }
+            this.setNome = function(value) {
+                this.nome = value;
+            }
+            this.getNome = function() {
+                return this.nome;
+            }
+        }
+        var aluno5 = new Aluno2();
+        aluno5.setRa("023");
+        aluno5.setNome("VINÍCIUS5");
+        alert("ra = " + aluno5.getRa() + "\nnome = " + aluno5.getNome());
+    </script>
+</body>
+</html>
