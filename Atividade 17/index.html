@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulário</title>
+    <script src="main.js"></script>
+</head>
+<body align=center>
+    <h1>Formulário Principal</h1>
+    <form action="sucesso.html" method="POST" name="formulario1" id="formulario1" onsubmit="return validarDados();">
+        <div id="principal" width=200 heigth=200>
+            Nome:
+            <br>
+            <input name="Nome" type="text" id="idNome" size="52" maxlength="150">
+            <br>
+            <br>
+            E-Mail:
+            <br>
+            <input name="Email" type="email" id="idEmail" size="52" maxlength="150">
+            <br>
+            <br>
+            Comentário:
+            <br>
+            <textarea name="Comentario" cols="50" rows="8" id="idComentario"></textarea>
+            <br>
+            <br>
+            Primeira vez nesta página?
+            <br>
+            <input name="radio" type="radio" id="idSim">Sim
+            <input name="radio" type="radio" id="idNao">Não
+            <br>
+            <br>
+            <input name="Submit" type="submit" form="formulario1" value="Enviar">
+            <input name="Reset" type="reset" form="formulario1" value="Limpar">
+        </div>
+    </form>
+</body>
+</html>
